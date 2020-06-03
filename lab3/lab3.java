@@ -36,9 +36,6 @@ public class lab3 {
         }
         System.out.println("Number of found sentences: "+ counter);
 
-        String Jenshina = new String(" Женщина");
-        String Chelovek = new String(" Человек");
-        System.out.println(Jenshina.equals(Chelovek));
     }
 
 }
