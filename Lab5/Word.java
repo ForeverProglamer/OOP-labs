@@ -1,7 +1,5 @@
 package com.company;
 
-import com.sun.deploy.security.SelectableSecurityManager;
-
 public class Word extends SentenceElement {
     private Letter[] letters;
 
