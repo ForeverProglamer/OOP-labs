@@ -26,7 +26,6 @@ public class Text {
 
 
     public void sentenceQuantityOfEntrances(){
-        String[] foundSentences = new String[sentences.length];
         int counter;
         counter = 0;
         for (Sentence sentence : sentences) {
