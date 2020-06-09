@@ -24,15 +24,6 @@ public class Text {
         return textString.toString();
     }
 
-//    public int findWordEntrancesQuantity(String wordString) {
-//        int wordEntrancesQuantity = 0;
-//
-//        for (Sentence sentence : sentences) {
-//            wordEntrancesQuantity += sentence.findWordEntrancesQuantity(wordString);
-//        }
-//
-//        return wordEntrancesQuantity;
-//    }
 
     public void sentenceQuantityOfEntrances(){
         String[] foundSentences = new String[sentences.length];
