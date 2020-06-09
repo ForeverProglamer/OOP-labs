@@ -34,21 +34,6 @@ public class Sentence {
         return sentenceString.toString();
     }
 
-//    public int findWordEntrancesQuantity(String wordString) {
-//        int wordEntrancesQuantity = 0;
-//
-//        for (SentenceElement sentenceElement : sentenceElements) {
-//            if (sentenceElement instanceof Word) {
-////                if (sentenceElement.toString().equals(wordString)) {
-//                Word word = (Word) sentenceElement;
-//                if (word.equalsString(wordString)) {
-//                    wordEntrancesQuantity++;
-//                }
-//            }
-//        }
-//
-//        return wordEntrancesQuantity;
-//    }
 
     public int sentenceQuantityOfEntrances(){
         int counter = 0;
