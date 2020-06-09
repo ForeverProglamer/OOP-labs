@@ -26,9 +26,6 @@ public class Word extends SentenceElement {
         return wordString.toString();
     }
 
-//    public boolean equalsString(String wordString) {
-//        return toString().equals(wordString);
-//    }
 
     public boolean equalsWord(Word wrdString) {
         return toString().equalsIgnoreCase(wrdString.toString());
