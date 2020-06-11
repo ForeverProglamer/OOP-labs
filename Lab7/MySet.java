@@ -91,14 +91,7 @@ public class MySet<E> implements Set<Vegetable> {
                     size++;
                     components[i] = e;
                     return true;
-                }
-            }
-            for (int i = 0; i < components.length; i++) {
-                if (components[i] == null) {
-                    size++;
-                    components[i] = e;
-                    return true;
-                }
+              
             }
         }
         return false;
