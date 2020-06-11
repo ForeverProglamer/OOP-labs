@@ -23,7 +23,7 @@ public class MySet<E> implements Set<Vegetable> {
 
     @Override
     public int size() {
-        return 0;
+        return size;
     }
 
     @Override
