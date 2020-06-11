@@ -33,14 +33,9 @@ public class MySet<E> implements Set<Vegetable> {
 
     @Override
     public boolean contains(Object o) {
-         for (int i = 0; i<elements.length; i++){
-            if (elements[i] == o){
-                return true;
-            }
-        }
         return false;
     }
-    private void increaseSize(){
+    private void changeSize(){
         Object[] temporary = components;
         components = new Object[(int)(components.length*increase)];
         size = 0;
@@ -133,7 +128,7 @@ public class MySet<E> implements Set<Vegetable> {
             isCollectionChanged |= add(Vegetable);
 
         }
-        increaseSize();
+        changeSize();
         return isCollectionChanged;
     }
 
