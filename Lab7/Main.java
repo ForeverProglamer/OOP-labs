@@ -32,6 +32,6 @@ public class Main {
         }
 
         System.out.println("It`s working!");
-        System.out.println("#HochyTroiky :)");
+       
     }
 }
