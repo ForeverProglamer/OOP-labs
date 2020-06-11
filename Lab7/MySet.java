@@ -3,7 +3,6 @@ package lab7;
 import com.company.Vegetable;
 import java.util.Collection;
 import java.util.Set;
-import java.util.Arrays;
 import java.util.Iterator;
 
 public class MySet<E> implements Set<Vegetable> {
@@ -34,11 +33,6 @@ public class MySet<E> implements Set<Vegetable> {
 
     @Override
     public boolean contains(Object o) {
-        for (int i = 0; i< components.length; i++){
-            if (components[i] == o){
-                return true;
-            }
-        }
         return false;
     }
     private void increaseSize(){
@@ -49,6 +43,12 @@ public class MySet<E> implements Set<Vegetable> {
             add((Vegetable)t);
         }
     }
+
+    @Override
+    public Iterator<Vegetable> iterator() {
+        return new MyIterator();
+    }
+
     private class MyIterator implements Iterator {
         private int index = 0;
 
@@ -72,25 +72,13 @@ public class MySet<E> implements Set<Vegetable> {
     }
 
     @Override
-    public Iterator<Vegetable> iterator() {
-        return new MyIterator();
-    }
-
-    @Override
     public Object[] toArray() {
-        return Arrays.copyOf(components, size);
+        return new Object[0];
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
-        if (a.length < size) {
-            return (T[]) Arrays.copyOf(components, size, a.getClass());
-        }
-        System.arraycopy(components, 0, a, 0, size);
-        if (a.length > size) {
-            a[size] = null;
-        }
-        return a;
+        return null;
     }
 
 
@@ -125,29 +113,12 @@ public class MySet<E> implements Set<Vegetable> {
 
     @Override
     public boolean remove(Object o) {
-        if(size==0){
-            return false;
-        }
-        for (int i = 0; i < components.length; i++) {
-            if (components[i]==o){
-                size--;
-                components[i]= components[lastNotEmpty()];
-                components[lastNotEmpty()]= null;
-                return true;
-            }
-        }
         return false;
     }
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        MyIterator iterator = (MyIterator)c.iterator();
-        while (iterator.hasNext()) {
-            if (!contains(iterator.next())){
-                return false;
-            }
-        }
-        return true;
+        return false;
     }
 
     @Override
@@ -166,30 +137,17 @@ public class MySet<E> implements Set<Vegetable> {
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        boolean flag = false;
-        for (Object i: components) {
-            if (!c.contains(i)){
-                flag |= remove(i);
-            }
-        }
-        return flag;
+        return false;
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        boolean flag = false;
-        for (Object o:c){
-            flag |= remove(o);
-        }
-        return flag;
+        return false;
     }
 
     @Override
     public void clear() {
-        for (int i = 0; i< components.length; i++){
-            components[i] = null;
-        }
-        size = 0;
+
     }
 
 
