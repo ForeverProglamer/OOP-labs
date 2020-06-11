@@ -33,6 +33,11 @@ public class MySet<E> implements Set<Vegetable> {
 
     @Override
     public boolean contains(Object o) {
+         for (int i = 0; i<elements.length; i++){
+            if (elements[i] == o){
+                return true;
+            }
+        }
         return false;
     }
     private void increaseSize(){
